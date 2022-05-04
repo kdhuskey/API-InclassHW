@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Weather in your area</title>
+    <script src="./index.js" defer></script>
+</head>
+
+<body class="body">
+    <h1>Weather for your city</h1>
+    <br>
+    <form class="form-input">
+        <p>
+            <label for="city"></label>
+            <input type="text" id="city" class="zip" name="city" placeholder="Enter your zipcode">
+            <button type="submit" class="get-wx">Enter</button>
+        </p>
+        <div class="weather-info"></div>
+    </form>
+    <!-- makes the cards in a row format -->
+    <div class="row mt-5" id="results">
+
+        <!-- data1 -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_114802408.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Sky conditions</h5>
+                <p class="card-text">Enter your info in the search bar to see sky conditions.</p>
+
+            </div>
+        </div>
+
+        <!-- data2 -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDe4fUS0ZTICnxbCQDuaRWNd3M9oSmw6ZGLAYPQHlZKs-gKz7LuGbd69HOcY8lavLWuic&usqp=CAU"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Temperature</h5>
+                <p class="card-text info-2">Enter your info in the search bar to see current temperature.</p>
+            </div>
+        </div>
+        
+        <!-- data3 -->
+        <div class="card" style="width: 18rem;">
+            <img src="data:image/jpeg;base64,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"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Wind</h5>
+                <p class="card-text info-3">Enter your info in the search bar to the wind speed.</p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+        
+        
+        
+</body>
+
+</html>

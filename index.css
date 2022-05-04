@@ -1,0 +1,21 @@
+.body {
+    background: url("https://wallpaperaccess.com/full/4515256.jpg");
+    
+    
+}
+h1 {
+    text-align: center;
+    color: antiquewhite;
+}
+.form-input{
+display: flex;
+justify-content: center;
+
+}
+
+#results{
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
