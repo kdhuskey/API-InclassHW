@@ -1,5 +1,7 @@
 .body {
-    background: url("https://wallpaperaccess.com/full/4515256.jpg");
+    background: url("https://wallpaperaccess.com/full/4515256.jpg") center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     
     
 }
